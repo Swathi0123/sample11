@@ -1,2 +1,8 @@
 [webservers]
 172.31.86.18 ansible_user=ec2-user
+...
+ hosts:
+  localhost:
+   vars:
+     ansible_connection: local
+     ansible_python_interpreter: "{{ansible_playbook_python}}"
